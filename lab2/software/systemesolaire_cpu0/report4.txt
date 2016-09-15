@@ -1,0 +1,1153 @@
+Flat profile:
+
+Each sample counts as 0.001 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 22.65      9.62     9.62  1695137     0.00     0.00  __mulsf3
+ 19.89     18.07     8.45  3666095     0.00     0.00  __pack_f
+ 11.71     23.05     4.97  7371127     0.00     0.00  __unpack_f
+  6.99     26.02     2.97  1173253     0.00     0.00  __muldi3
+  6.53     28.79     2.77  1697783     0.00     0.00  _fpadd_parts
+  4.49     30.70     1.91   540366     0.00     0.00  __subsf3
+  3.98     32.39     1.69  1157417     0.00     0.00  __addsf3
+  3.06     33.69     1.30    38848     0.00     0.00  __ieee754_acosf
+  2.81     34.88     1.20   160178     0.00     0.00  __clzsi2
+  2.57     35.97     1.09    39564     0.00     0.00  ss_planet_getBall3DIntensity
+  1.92     36.79     0.82   109362     0.00     0.00  __ieee754_sqrtf
+  1.92     37.60     0.81    39564     0.00     0.00  matrice4d_product_v4d
+  1.58     38.27     0.67   110523     0.00     0.00  __divsf3
+  1.09     38.73     0.46   161872     0.00     0.00  __floatsisf
+  1.00     39.16     0.42    79340     0.00     0.00  sqrtf
+  0.96     39.57     0.41                             __malloc_unlock
+  0.92     39.96     0.39        3     0.13     0.13  altera_avalon_jtag_uart_close
+  0.90     40.34     0.38                             read
+  0.71     40.64     0.30   159962     0.00     0.00  __fpcmp_parts_f
+  0.55     40.87     0.23    42014     0.00     0.00  __fixsfsi
+  0.50     41.09     0.21        9     0.02     4.42  ss_planet_drawBall3D
+  0.47     41.29     0.20    17954     0.00     0.00  __kernel_cosf
+  0.35     41.44     0.15    40923     0.00     0.00  __gtsf2
+  0.25     41.54     0.11    18386     0.00     0.00  __ieee754_rem_pio2f
+  0.25     41.65     0.11    22046     0.00     0.00  __kernel_sinf
+  0.23     41.74     0.10    38848     0.00     0.00  acosf
+  0.22     41.84     0.09    45324     0.00     0.00  ecran2d_setPixel
+  0.21     41.93     0.09   118188     0.00     0.00  isnanf
+  0.15     41.99     0.06    39424     0.00     0.00  sinf
+  0.14     42.05     0.06        1     0.06     0.06  ecran2d_clear
+  0.13     42.11     0.05    80162     0.00     0.00  __ltsf2
+  0.12     42.15     0.05      587     0.00     0.00  matrice4d_product_m4d
+  0.08     42.19     0.03       10     0.00     0.01  ss_planet_render
+  0.07     42.22     0.03        1     0.03     0.03  _exit
+  0.07     42.25     0.03    39568     0.00     0.00  fabsf
+  0.07     42.27     0.03    39564     0.00     0.00  vecteur4d_init
+  0.05     42.29     0.02    39564     0.00     0.00  __lesf2
+  0.05     42.31     0.02                             camera3d_setOrientation
+  0.05     42.33     0.02                             __gesf2
+  0.04     42.35     0.02      716     0.00     0.00  matherr
+  0.04     42.36     0.01      576     0.00     0.00  cosf
+  0.04     42.38     0.01                             vecteur4d_init_v3d
+  0.03     42.39     0.01       30     0.00     0.00  __nesf2
+  0.03     42.40     0.01                             scalbnf
+  0.02     42.41     0.01      616     0.00     0.00  matrice4d_product_v3d
+  0.02     42.42     0.01      869     0.00     0.00  __extendsfdf2
+  0.01     42.43     0.01      797     0.00     0.00  __divdf3
+  0.01     42.43     0.01                             matrice4d_init
+  0.01     42.44     0.01     2535     0.00     0.00  __unpack_d
+  0.01     42.44     0.01     1738     0.00     0.00  __pack_d
+  0.01     42.45     0.00                             nan
+  0.01     42.45     0.00      111     0.00     0.00  vecteur3d_normalize
+  0.01     42.45     0.00        9     0.00     0.03  ss_orbit_init
+  0.01     42.46     0.00                             __kernel_rem_pio2f
+  0.01     42.46     0.00                             __mcount_record
+  0.01     42.47     0.00        9     0.00     0.11  ss_orbit_render
+  0.00     42.47     0.00      278     0.00     0.00  ss_orbit_line_clip
+  0.00     42.47     0.00        9     0.00     0.00  ss_orbit_draw
+  0.00     42.47     0.00        1     0.00     0.03  ss_solar_system_calculateSpeedVariations
+  0.00     42.47     0.00     1298     0.00     0.00  vecteur3d_init
+  0.00     42.47     0.00      869     0.00     0.00  __make_dp
+  0.00     42.47     0.00       72     0.00     0.00  __muldf3
+  0.00     42.48     0.00       72     0.00     0.00  vecteur3d_sub
+  0.00     42.48     0.00       20     0.00     0.00  vecteur3d_add
+  0.00     42.48     0.00        1     0.00    40.84  ss_solar_system_iterate
+  0.00     42.48     0.00       10     0.00     0.00  vecteur3d_mul
+  0.00     42.48     0.00                             nios2_pcsample
+  0.00     42.48     0.00   148179     0.00     0.00  alt_irq_handler
+  0.00     42.48     0.00   148173     0.00     0.00  alt_avalon_timer_sc_irq
+  0.00     42.48     0.00   148173     0.00     0.00  alt_tick
+  0.00     42.48     0.00      797     0.00     0.00  __make_fp
+  0.00     42.48     0.00      797     0.00     0.00  __truncdfsf2
+  0.00     42.48     0.00      716     0.00     0.00  __errno
+  0.00     42.48     0.00      616     0.00     0.00  vecteur4d_getVecteur3d
+  0.00     42.48     0.00      582     0.00     0.00  memcpy
+  0.00     42.48     0.00      148     0.00     0.00  altera_avalon_jtag_uart_timeout
+  0.00     42.48     0.00       81     0.00     0.00  vecteur3d_length
+  0.00     42.48     0.00       20     0.00     0.00  vecteur3d_distance
+  0.00     42.48     0.00       10     0.00     0.00  matrice4d_setRotationMatrixXYZ
+  0.00     42.48     0.00       10     0.00     0.00  ss_planet_clear
+  0.00     42.48     0.00       10     0.00     3.97  ss_planet_draw
+  0.00     42.48     0.00       10     0.00     0.00  ss_planet_init
+  0.00     42.48     0.00       10     0.00     0.00  ss_planet_swapDisplayBuffer
+  0.00     42.48     0.00       10     0.00     0.00  vecteur3d_crossProduct
+  0.00     42.48     0.00       10     0.00     0.00  vecteur3d_negate
+  0.00     42.48     0.00        9     0.00     0.00  ss_orbit_clear
+  0.00     42.48     0.00        9     0.00     0.00  ss_orbit_swapDisplayBuffer
+  0.00     42.48     0.00        9     0.00     0.00  ss_planet_updatePos
+  0.00     42.48     0.00        9     0.00     0.00  ss_planet_updateSpeed
+  0.00     42.48     0.00        6     0.00     0.00  __swrite
+  0.00     42.48     0.00        6     0.00     0.00  _write_r
+  0.00     42.48     0.00        6     0.00     0.00  alt_release_fd
+  0.00     42.48     0.00        6     0.00     0.00  altera_avalon_jtag_uart_irq
+  0.00     42.48     0.00        6     0.00     0.00  altera_avalon_jtag_uart_write
+  0.00     42.48     0.00        6     0.00     0.00  altera_avalon_jtag_uart_write_fd
+  0.00     42.48     0.00        6     0.00     0.00  strlen
+  0.00     42.48     0.00        6     0.00     0.00  write
+  0.00     42.48     0.00        4     0.00     0.00  __sfp_lock_acquire
+  0.00     42.48     0.00        4     0.00     0.00  __sfp_lock_release
+  0.00     42.48     0.00        3     0.00     0.00  __sclose
+  0.00     42.48     0.00        3     0.00     0.00  __sfvwrite_r
+  0.00     42.48     0.00        3     0.00     0.13  _close_r
+  0.00     42.48     0.00        3     0.00     0.13  _fclose_r
+  0.00     42.48     0.00        3     0.00     0.00  _fflush_r
+  0.00     42.48     0.00        3     0.00     0.00  _puts_r
+  0.00     42.48     0.00        3     0.00     0.00  alt_find_dev
+  0.00     42.48     0.00        3     0.00     0.00  alt_get_fd
+  0.00     42.48     0.00        3     0.00     0.00  altera_avalon_jtag_uart_close_fd
+  0.00     42.48     0.00        3     0.00     0.13  close
+  0.00     42.48     0.00        3     0.00     0.00  fclose
+  0.00     42.48     0.00        3     0.00     0.00  memcmp
+  0.00     42.48     0.00        3     0.00     0.00  open
+  0.00     42.48     0.00        3     0.00     0.00  puts
+  0.00     42.48     0.00        3     0.00     0.00  std
+  0.00     42.48     0.00        2     0.00     0.00  alt_alarm_start
+  0.00     42.48     0.00        2     0.00     0.00  alt_ic_irq_enable
+  0.00     42.48     0.00        2     0.00     0.00  alt_ic_isr_register
+  0.00     42.48     0.00        2     0.00     0.00  alt_iic_isr_register
+  0.00     42.48     0.00        1     0.00     0.00  __call_exitprocs
+  0.00     42.48     0.00        1     0.00     0.00  __sinit
+  0.00     42.48     0.00        1     0.00     0.00  __smakebuf_r
+  0.00     42.48     0.00        1     0.00     0.00  __swsetup_r
+  0.00     42.48     0.00        1     0.00     0.00  _cleanup_r
+  0.00     42.48     0.00        1     0.00     0.39  _fwalk
+  0.00     42.48     0.00        1     0.00     0.00  alt_avalon_timer_sc_init
+  0.00     42.48     0.00        1     0.00     0.00  alt_dcache_flush_all
+  0.00     42.48     0.00        1     0.00     0.00  alt_dev_llist_insert
+  0.00     42.48     0.00        1     0.00     0.00  alt_icache_flush
+  0.00     42.48     0.00        1     0.00     0.00  alt_icache_flush_all
+  0.00     42.48     0.00        1     0.00     0.00  alt_io_redirect
+  0.00     42.48     0.00        1     0.00     0.00  alt_irq_init
+  0.00     42.48     0.00        1     0.00     0.00  alt_load
+  0.00     42.48     0.00        1     0.00    41.61  alt_main
+  0.00     42.48     0.00        1     0.00     0.00  alt_sys_init
+  0.00     42.48     0.00        1     0.00     0.00  altera_avalon_jtag_uart_init
+  0.00     42.48     0.00        1     0.00     0.00  altera_nios2_qsys_irq_init
+  0.00     42.48     0.00        1     0.00     0.00  camera3d_init
+  0.00     42.48     0.00        1     0.00     0.42  exit
+  0.00     42.48     0.00        1     0.00    41.61  main
+  0.00     42.48     0.00        1     0.00     0.00  matrice4d_setProjectionMatrix
+  0.00     42.48     0.00        1     0.00     0.00  matrice4d_setTranslationMatrix
+  0.00     42.48     0.00        1     0.00     0.00  memset
+  0.00     42.48     0.00        1     0.00     0.28  ss_solar_system_init
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 32 byte(s) for 0.00% of 42.48 seconds
+
+index % time    self  children    called     name
+                0.00   41.61       1/1           _start [3]
+[1]     97.9    0.00   41.61       1         alt_main [1]
+                0.00   41.61       1/1           main [2]
+                0.00    0.00       1/1           alt_io_redirect [123]
+                0.00    0.00       1/6           alt_release_fd [100]
+                0.00    0.00       1/1           alt_sys_init [126]
+                0.00    0.00       1/1           alt_dev_llist_insert [120]
+                0.00    0.00       1/1           alt_irq_init [124]
+-----------------------------------------------
+                0.00   41.61       1/1           alt_main [1]
+[2]     97.9    0.00   41.61       1         main [2]
+                0.00   40.84       1/1           ss_solar_system_iterate [4]
+                0.00    0.42       1/1           exit [29]
+                0.00    0.28       1/1           ss_solar_system_init [40]
+                0.06    0.00       1/1           ecran2d_clear [49]
+                0.00    0.00       1/1           camera3d_init [81]
+                0.00    0.00       3/3           _puts_r [208]
+                0.00    0.00       3/3           puts [112]
+-----------------------------------------------
+                                                 <spontaneous>
+[3]     97.9    0.00   41.61                 _start [3]
+                0.00   41.61       1/1           alt_main [1]
+                0.00    0.00       1/1           alt_icache_flush [121]
+                0.00    0.00       1/1           alt_icache_flush_all [122]
+                0.00    0.00       1/1           alt_load [125]
+-----------------------------------------------
+                0.00   40.84       1/1           main [2]
+[4]     96.1    0.00   40.84       1         ss_solar_system_iterate [4]
+                0.00   39.75      10/10          ss_planet_draw [5]
+                0.00    0.97       9/9           ss_orbit_render [25]
+                0.03    0.04      10/10          ss_planet_render [48]
+                0.00    0.03       1/1           ss_solar_system_calculateSpeedVariations [50]
+                0.00    0.01       9/9           ss_orbit_draw [62]
+                0.00    0.00      10/10          ss_planet_clear [69]
+                0.00    0.00      10/20          vecteur3d_distance [80]
+                0.00    0.00       9/9           ss_planet_updatePos [85]
+                0.00    0.00      45/40923       __gtsf2 [39]
+                0.00    0.00      10/79340       sqrtf [22]
+                0.00    0.00       9/9           ss_planet_updateSpeed [88]
+                0.00    0.00      10/10          ss_planet_swapDisplayBuffer [96]
+                0.00    0.00       9/9           ss_orbit_swapDisplayBuffer [99]
+                0.00    0.00       9/9           ss_orbit_clear [98]
+-----------------------------------------------
+                0.00   39.75      10/10          ss_solar_system_iterate [4]
+[5]     93.6    0.00   39.75      10         ss_planet_draw [5]
+                0.21   39.53       9/9           ss_planet_drawBall3D [6]
+                0.00    0.00      10/30          __nesf2 [61]
+                0.00    0.00      18/42014       __fixsfsi [42]
+-----------------------------------------------
+                0.21   39.53       9/9           ss_planet_draw [5]
+[6]     93.6    0.21   39.53       9         ss_planet_drawBall3D [6]
+                1.09   38.36   39564/39564       ss_planet_getBall3DIntensity [7]
+                0.08    0.00   39564/45324       ecran2d_setPixel [46]
+                0.00    0.00       9/10          vecteur3d_crossProduct [83]
+                0.00    0.00       9/10          matrice4d_setRotationMatrixXYZ [95]
+-----------------------------------------------
+                1.09   38.36   39564/39564       ss_planet_drawBall3D [6]
+[7]     92.9    1.09   38.36   39564         ss_planet_getBall3DIntensity [7]
+                0.10   12.25   38848/38848       acosf [9]
+                0.81   11.29   39564/39564       matrice4d_product_v4d [10]
+                0.06    7.27   38848/39424       sinf [14]
+                0.45    1.53  158256/161872      __floatsisf [21]
+                0.89    0.85  157540/1695137     __mulsf3 [8]
+                0.42    1.01   79128/79340       sqrtf [22]
+                0.24    0.14   38848/110523      __divsf3 [24]
+                0.14    0.21   39564/540366      __subsf3 [16]
+                0.06    0.21   39564/1157417     __addsf3 [13]
+                0.22    0.03   38848/42014       __fixsfsi [42]
+                0.02    0.13   39564/39564       __lesf2 [44]
+                0.03    0.00   39564/39564       vecteur4d_init [54]
+-----------------------------------------------
+                0.00    0.00       1/1695137     matrice4d_setProjectionMatrix [89]
+                0.00    0.00      10/1695137     ss_planet_init [86]
+                0.00    0.00      18/1695137     ss_planet_updatePos [85]
+                0.00    0.00      30/1695137     vecteur3d_mul [84]
+                0.00    0.00      60/1695137     ss_planet_render [48]
+                0.00    0.00      60/1695137     vecteur3d_distance [80]
+                0.00    0.00      60/1695137     vecteur3d_crossProduct [83]
+                0.00    0.00     243/1695137     vecteur3d_length [72]
+                0.00    0.00     333/1695137     vecteur3d_normalize [60]
+                0.00    0.00     405/1695137     ss_solar_system_calculateSpeedVariations [50]
+                0.00    0.00     717/1695137     __ieee754_sqrtf [26]
+                0.01    0.01    2268/1695137     __ieee754_rem_pio2f [27]
+                0.01    0.01    2304/1695137     ss_orbit_render [25]
+                0.01    0.01    2304/1695137     ss_orbit_init [41]
+                0.04    0.04    7392/1695137     matrice4d_product_v3d [43]
+                0.21    0.20   37568/1695137     matrice4d_product_m4d [28]
+                0.89    0.85  157540/1695137     ss_planet_getBall3DIntensity [7]
+                1.00    0.95  176520/1695137     __kernel_sinf [18]
+                1.02    0.97  179450/1695137     __kernel_cosf [17]
+                2.81    2.68  494830/1695137     __ieee754_acosf [11]
+                3.59    3.42  633024/1695137     matrice4d_product_v4d [10]
+[8]     44.2    9.62    9.17 1695137         __mulsf3 [8]
+                3.91    0.00 1695137/3666095     __pack_f [12]
+                2.97    0.00 1172965/1173253     __muldi3 [19]
+                2.29    0.00 3390274/7371127     __unpack_f [15]
+-----------------------------------------------
+                0.10   12.25   38848/38848       ss_planet_getBall3DIntensity [7]
+[9]     29.1    0.10   12.25   38848         acosf [9]
+                1.30   10.63   38848/38848       __ieee754_acosf [11]
+                0.14    0.13   38848/40923       __gtsf2 [39]
+                0.03    0.00   38848/118188      isnanf [47]
+                0.03    0.00   38848/39568       fabsf [52]
+-----------------------------------------------
+                0.81   11.29   39564/39564       ss_planet_getBall3DIntensity [7]
+[10]    28.5    0.81   11.29   39564         matrice4d_product_v4d [10]
+                3.59    3.42  633024/1695137     __mulsf3 [8]
+                0.93    3.35  633024/1157417     __addsf3 [13]
+-----------------------------------------------
+                1.30   10.63   38848/38848       acosf [9]
+[11]    28.1    1.30   10.63   38848         __ieee754_acosf [11]
+                2.81    2.68  494830/1695137     __mulsf3 [8]
+                0.85    1.27  241116/540366      __subsf3 [16]
+                0.46    1.66  313758/1157417     __addsf3 [13]
+                0.42    0.25   68756/110523      __divsf3 [24]
+                0.22    0.01   30022/109362      __ieee754_sqrtf [26]
+-----------------------------------------------
+                0.00    0.00     797/3666095     __make_fp [78]
+                0.25    0.00  110523/3666095     __divsf3 [24]
+                0.37    0.00  161855/3666095     __floatsisf [21]
+                1.25    0.00  540366/3666095     __subsf3 [16]
+                2.67    0.00 1157417/3666095     __addsf3 [13]
+                3.91    0.00 1695137/3666095     __mulsf3 [8]
+[12]    19.9    8.45    0.00 3666095         __pack_f [12]
+-----------------------------------------------
+                0.00    0.00       2/1157417     matrice4d_setProjectionMatrix [89]
+                0.00    0.00      18/1157417     ss_planet_updatePos [85]
+                0.00    0.00      18/1157417     ss_planet_updateSpeed [88]
+                0.00    0.00      20/1157417     ss_planet_render [48]
+                0.00    0.00      40/1157417     vecteur3d_distance [80]
+                0.00    0.00      60/1157417     vecteur3d_add [82]
+                0.00    0.00     144/1157417     ss_solar_system_calculateSpeedVariations [50]
+                0.00    0.00     162/1157417     vecteur3d_length [72]
+                0.00    0.00     222/1157417     vecteur3d_normalize [60]
+                0.00    0.00     717/1157417     __ieee754_sqrtf [26]
+                0.00    0.01    1152/1157417     ss_orbit_render [25]
+                0.00    0.01    1440/1157417     __ieee754_rem_pio2f [27]
+                0.01    0.05    9856/1157417     matrice4d_product_v3d [43]
+                0.05    0.20   37568/1157417     matrice4d_product_m4d [28]
+                0.06    0.21   39564/1157417     ss_planet_getBall3DIntensity [7]
+                0.08    0.28   53835/1157417     __kernel_cosf [17]
+                0.10    0.35   65817/1157417     __kernel_sinf [18]
+                0.46    1.66  313758/1157417     __ieee754_acosf [11]
+                0.93    3.35  633024/1157417     matrice4d_product_v4d [10]
+[13]    18.4    1.69    6.12 1157417         __addsf3 [13]
+                2.67    0.00 1157417/3666095     __pack_f [12]
+                1.89    0.00 1157417/1697783     _fpadd_parts [20]
+                1.56    0.00 2314834/7371127     __unpack_f [15]
+-----------------------------------------------
+                0.00    0.11     576/39424       ss_orbit_init [41]
+                0.06    7.27   38848/39424       ss_planet_getBall3DIntensity [7]
+[14]    17.5    0.06    7.37   39424         sinf [14]
+                0.20    3.34   17666/17954       __kernel_cosf [17]
+                0.10    2.95   21758/22046       __kernel_sinf [18]
+                0.10    0.67   17882/18386       __ieee754_rem_pio2f [27]
+-----------------------------------------------
+                0.00    0.00      60/7371127     __nesf2 [61]
+                0.00    0.00     869/7371127     __extendsfdf2 [65]
+                0.03    0.00   42014/7371127     __fixsfsi [42]
+                0.05    0.00   79128/7371127     __lesf2 [44]
+                0.06    0.00   81846/7371127     __gtsf2 [39]
+                0.11    0.00  160324/7371127     __ltsf2 [37]
+                0.15    0.00  221046/7371127     __divsf3 [24]
+                0.73    0.00 1080732/7371127     __subsf3 [16]
+                1.56    0.00 2314834/7371127     __addsf3 [13]
+                2.29    0.00 3390274/7371127     __mulsf3 [8]
+[15]    11.7    4.97    0.00 7371127         __unpack_f [15]
+-----------------------------------------------
+                0.00    0.00       2/540366      matrice4d_setProjectionMatrix [89]
+                0.00    0.00      30/540366      vecteur3d_crossProduct [83]
+                0.00    0.00      60/540366      ss_planet_render [48]
+                0.00    0.00      60/540366      vecteur3d_distance [80]
+                0.00    0.00     216/540366      vecteur3d_sub [76]
+                0.00    0.00     716/540366      __ieee754_sqrtf [26]
+                0.14    0.21   39564/540366      ss_planet_getBall3DIntensity [7]
+                0.24    0.35   66825/540366      __kernel_sinf [18]
+                0.26    0.39   73128/540366      __ieee754_rem_pio2f [27]
+                0.42    0.63  118649/540366      __kernel_cosf [17]
+                0.85    1.27  241116/540366      __ieee754_acosf [11]
+[16]    11.2    1.91    2.86  540366         __subsf3 [16]
+                1.25    0.00  540366/3666095     __pack_f [12]
+                0.88    0.00  540366/1697783     _fpadd_parts [20]
+                0.73    0.00 1080732/7371127     __unpack_f [15]
+-----------------------------------------------
+                0.00    0.05     288/17954       cosf [45]
+                0.20    3.34   17666/17954       sinf [14]
+[17]     8.5    0.20    3.40   17954         __kernel_cosf [17]
+                1.02    0.97  179450/1695137     __mulsf3 [8]
+                0.42    0.63  118649/540366      __subsf3 [16]
+                0.08    0.28   53835/1157417     __addsf3 [13]
+                0.00    0.00       9/42014       __fixsfsi [42]
+-----------------------------------------------
+                0.00    0.04     288/22046       cosf [45]
+                0.10    2.95   21758/22046       sinf [14]
+[18]     7.3    0.11    2.99   22046         __kernel_sinf [18]
+                1.00    0.95  176520/1695137     __mulsf3 [8]
+                0.24    0.35   66825/540366      __subsf3 [16]
+                0.10    0.35   65817/1157417     __addsf3 [13]
+                0.00    0.00     107/42014       __fixsfsi [42]
+-----------------------------------------------
+                0.00    0.00     288/1173253     __muldf3 [77]
+                2.97    0.00 1172965/1173253     __mulsf3 [8]
+[19]     7.0    2.97    0.00 1173253         __muldi3 [19]
+-----------------------------------------------
+                0.88    0.00  540366/1697783     __subsf3 [16]
+                1.89    0.00 1157417/1697783     __addsf3 [13]
+[20]     6.5    2.77    0.00 1697783         _fpadd_parts [20]
+-----------------------------------------------
+                0.00    0.00      20/161872      ss_planet_render [48]
+                0.00    0.01     576/161872      ss_orbit_init [41]
+                0.00    0.01     720/161872      __ieee754_rem_pio2f [27]
+                0.00    0.01    1148/161872      ss_orbit_line_clip [53]
+                0.00    0.01    1152/161872      ss_orbit_render [25]
+                0.45    1.53  158256/161872      ss_planet_getBall3DIntensity [7]
+[21]     4.8    0.46    1.57  161872         __floatsisf [21]
+                1.20    0.00  160178/160178      __clzsi2 [23]
+                0.37    0.00  161855/3666095     __pack_f [12]
+-----------------------------------------------
+                0.00    0.00      10/79340       ss_solar_system_iterate [4]
+                0.00    0.00      10/79340       ss_planet_render [48]
+                0.00    0.00      81/79340       ss_solar_system_calculateSpeedVariations [50]
+                0.00    0.00     111/79340       vecteur3d_normalize [60]
+                0.42    1.01   79128/79340       ss_planet_getBall3DIntensity [7]
+[22]     3.4    0.42    1.02   79340         sqrtf [22]
+                0.59    0.02   79340/109362      __ieee754_sqrtf [26]
+                0.05    0.25   78623/80162       __ltsf2 [37]
+                0.06    0.00   79340/118188      isnanf [47]
+                0.02    0.00     716/716         matherr [58]
+                0.01    0.00     716/797         __divdf3 [63]
+                0.01    0.00     716/869         __extendsfdf2 [65]
+                0.00    0.00     716/797         __truncdfsf2 [75]
+                0.00    0.00     716/716         __errno [200]
+-----------------------------------------------
+                1.20    0.00  160178/160178      __floatsisf [21]
+[23]     2.8    1.20    0.00  160178         __clzsi2 [23]
+-----------------------------------------------
+                0.00    0.00       2/110523      matrice4d_setProjectionMatrix [89]
+                0.00    0.00      10/110523      ss_planet_render [48]
+                0.00    0.00      10/110523      ss_planet_init [86]
+                0.00    0.00     333/110523      vecteur3d_normalize [60]
+                0.00    0.00     716/110523      __ieee754_sqrtf [26]
+                0.01    0.01    1848/110523      vecteur4d_getVecteur3d [55]
+                0.24    0.14   38848/110523      ss_planet_getBall3DIntensity [7]
+                0.42    0.25   68756/110523      __ieee754_acosf [11]
+[24]     2.5    0.67    0.40  110523         __divsf3 [24]
+                0.25    0.00  110523/3666095     __pack_f [12]
+                0.15    0.00  221046/7371127     __unpack_f [15]
+-----------------------------------------------
+                0.00    0.97       9/9           ss_solar_system_iterate [4]
+[25]     2.3    0.00    0.97       9         ss_orbit_render [25]
+                0.05    0.66     576/587         matrice4d_product_m4d [28]
+                0.01    0.14     576/616         matrice4d_product_v3d [43]
+                0.00    0.03     278/278         ss_orbit_line_clip [53]
+                0.01    0.01    2304/1695137     __mulsf3 [8]
+                0.00    0.02     576/616         vecteur4d_getVecteur3d [55]
+                0.00    0.01    1152/161872      __floatsisf [21]
+                0.01    0.00    2264/42014       __fixsfsi [42]
+                0.00    0.01    1152/1157417     __addsf3 [13]
+                0.00    0.00     863/40923       __gtsf2 [39]
+                0.00    0.00     576/1298        vecteur3d_init [79]
+                0.00    0.00     576/582         memcpy [93]
+-----------------------------------------------
+                0.22    0.01   30022/109362      __ieee754_acosf [11]
+                0.59    0.02   79340/109362      sqrtf [22]
+[26]     2.0    0.82    0.03  109362         __ieee754_sqrtf [26]
+                0.00    0.00     717/1695137     __mulsf3 [8]
+                0.00    0.00     716/110523      __divsf3 [24]
+                0.00    0.00     716/540366      __subsf3 [16]
+                0.00    0.00     717/1157417     __addsf3 [13]
+-----------------------------------------------
+                0.00    0.02     504/18386       cosf [45]
+                0.10    0.67   17882/18386       sinf [14]
+[27]     1.9    0.11    0.69   18386         __ieee754_rem_pio2f [27]
+                0.26    0.39   73128/540366      __subsf3 [16]
+                0.01    0.01    2268/1695137     __mulsf3 [8]
+                0.00    0.01    1440/1157417     __addsf3 [13]
+                0.00    0.01     720/161872      __floatsisf [21]
+                0.00    0.00     720/42014       __fixsfsi [42]
+                0.00    0.00     720/39568       fabsf [52]
+-----------------------------------------------
+                0.00    0.00       1/587         camera3d_init [81]
+                0.00    0.01      10/587         ss_planet_render [48]
+                0.05    0.66     576/587         ss_orbit_render [25]
+[28]     1.7    0.05    0.67     587         matrice4d_product_m4d [28]
+                0.21    0.20   37568/1695137     __mulsf3 [8]
+                0.05    0.20   37568/1157417     __addsf3 [13]
+-----------------------------------------------
+                0.00    0.42       1/1           main [2]
+[29]     1.0    0.00    0.42       1         exit [29]
+                0.00    0.39       1/1           _fwalk [35]
+                0.03    0.00       1/1           _exit [51]
+                0.00    0.00       1/1           __call_exitprocs [209]
+                0.00    0.00       1/1           _cleanup_r [213]
+-----------------------------------------------
+                                                 <spontaneous>
+[30]     1.0    0.41    0.00                 __malloc_unlock [30]
+-----------------------------------------------
+                0.39    0.00       3/3           close [32]
+[31]     0.9    0.39    0.00       3         altera_avalon_jtag_uart_close [31]
+-----------------------------------------------
+                0.00    0.39       3/3           _close_r [33]
+[32]     0.9    0.00    0.39       3         close [32]
+                0.39    0.00       3/3           altera_avalon_jtag_uart_close [31]
+                0.00    0.00       3/6           alt_release_fd [100]
+                0.00    0.00       3/3           altera_avalon_jtag_uart_close_fd [108]
+-----------------------------------------------
+                0.00    0.39       3/3           _fclose_r [34]
+[33]     0.9    0.00    0.39       3         _close_r [33]
+                0.00    0.39       3/3           close [32]
+-----------------------------------------------
+                0.00    0.39       3/3           _fwalk [35]
+[34]     0.9    0.00    0.39       3         _fclose_r [34]
+                0.00    0.39       3/3           _close_r [33]
+                0.00    0.00       3/3           __sclose [205]
+                0.00    0.00       3/3           _fflush_r [207]
+                0.00    0.00       3/4           __sfp_lock_acquire [203]
+                0.00    0.00       3/4           __sfp_lock_release [204]
+-----------------------------------------------
+                0.00    0.39       1/1           exit [29]
+[35]     0.9    0.00    0.39       1         _fwalk [35]
+                0.00    0.39       3/3           _fclose_r [34]
+                0.00    0.00       3/3           fclose [109]
+                0.00    0.00       1/4           __sfp_lock_acquire [203]
+                0.00    0.00       1/4           __sfp_lock_release [204]
+-----------------------------------------------
+                                                 <spontaneous>
+[36]     0.9    0.38    0.00                 read [36]
+-----------------------------------------------
+                0.00    0.00     616/80162       vecteur4d_getVecteur3d [55]
+                0.00    0.00     923/80162       ss_orbit_line_clip [53]
+                0.05    0.25   78623/80162       sqrtf [22]
+[37]     0.7    0.05    0.26   80162         __ltsf2 [37]
+                0.15    0.00   80161/159962      __fpcmp_parts_f [38]
+                0.11    0.00  160324/7371127     __unpack_f [15]
+-----------------------------------------------
+                0.00    0.00      30/159962      __nesf2 [61]
+                0.07    0.00   38848/159962      __lesf2 [44]
+                0.08    0.00   40923/159962      __gtsf2 [39]
+                0.15    0.00   80161/159962      __ltsf2 [37]
+[38]     0.7    0.30    0.00  159962         __fpcmp_parts_f [38]
+-----------------------------------------------
+                0.00    0.00      19/40923       ss_planet_render [48]
+                0.00    0.00      45/40923       ss_solar_system_iterate [4]
+                0.00    0.00     863/40923       ss_orbit_render [25]
+                0.00    0.00    1148/40923       ss_orbit_line_clip [53]
+                0.14    0.13   38848/40923       acosf [9]
+[39]     0.7    0.15    0.13   40923         __gtsf2 [39]
+                0.08    0.00   40923/159962      __fpcmp_parts_f [38]
+                0.06    0.00   81846/7371127     __unpack_f [15]
+-----------------------------------------------
+                0.00    0.28       1/1           main [2]
+[40]     0.7    0.00    0.28       1         ss_solar_system_init [40]
+                0.00    0.28       9/9           ss_orbit_init [41]
+                0.00    0.00      10/10          ss_planet_init [86]
+                0.00    0.00      10/1298        vecteur3d_init [79]
+-----------------------------------------------
+                0.00    0.28       9/9           ss_solar_system_init [40]
+[41]     0.7    0.00    0.28       9         ss_orbit_init [41]
+                0.01    0.12     576/576         cosf [45]
+                0.00    0.11     576/39424       sinf [14]
+                0.01    0.01    2304/1695137     __mulsf3 [8]
+                0.00    0.01     576/161872      __floatsisf [21]
+                0.00    0.00     576/1298        vecteur3d_init [79]
+-----------------------------------------------
+                0.00    0.00       9/42014       __kernel_cosf [17]
+                0.00    0.00      18/42014       ss_planet_draw [5]
+                0.00    0.00      18/42014       ss_orbit_line_clip [53]
+                0.00    0.00      30/42014       ss_planet_render [48]
+                0.00    0.00     107/42014       __kernel_sinf [18]
+                0.00    0.00     720/42014       __ieee754_rem_pio2f [27]
+                0.01    0.00    2264/42014       ss_orbit_render [25]
+                0.22    0.03   38848/42014       ss_planet_getBall3DIntensity [7]
+[42]     0.6    0.23    0.03   42014         __fixsfsi [42]
+                0.03    0.00   42014/7371127     __unpack_f [15]
+-----------------------------------------------
+                0.00    0.01      40/616         ss_planet_render [48]
+                0.01    0.14     576/616         ss_orbit_render [25]
+[43]     0.4    0.01    0.15     616         matrice4d_product_v3d [43]
+                0.04    0.04    7392/1695137     __mulsf3 [8]
+                0.01    0.05    9856/1157417     __addsf3 [13]
+-----------------------------------------------
+                0.02    0.13   39564/39564       ss_planet_getBall3DIntensity [7]
+[44]     0.3    0.02    0.13   39564         __lesf2 [44]
+                0.07    0.00   38848/159962      __fpcmp_parts_f [38]
+                0.05    0.00   79128/7371127     __unpack_f [15]
+-----------------------------------------------
+                0.01    0.12     576/576         ss_orbit_init [41]
+[45]     0.3    0.01    0.12     576         cosf [45]
+                0.00    0.05     288/17954       __kernel_cosf [17]
+                0.00    0.04     288/22046       __kernel_sinf [18]
+                0.00    0.02     504/18386       __ieee754_rem_pio2f [27]
+-----------------------------------------------
+                0.01    0.00    5760/45324       ss_orbit_draw [62]
+                0.08    0.00   39564/45324       ss_planet_drawBall3D [6]
+[46]     0.2    0.09    0.00   45324         ecran2d_setPixel [46]
+-----------------------------------------------
+                0.03    0.00   38848/118188      acosf [9]
+                0.06    0.00   79340/118188      sqrtf [22]
+[47]     0.2    0.09    0.00  118188         isnanf [47]
+-----------------------------------------------
+                0.03    0.04      10/10          ss_solar_system_iterate [4]
+[48]     0.2    0.03    0.04      10         ss_planet_render [48]
+                0.00    0.01      10/587         matrice4d_product_m4d [28]
+                0.00    0.01      40/616         matrice4d_product_v3d [43]
+                0.00    0.00      10/30          __nesf2 [61]
+                0.00    0.00      30/111         vecteur3d_normalize [60]
+                0.00    0.00      40/616         vecteur4d_getVecteur3d [55]
+                0.00    0.00      20/20          vecteur3d_add [82]
+                0.00    0.00      10/20          vecteur3d_distance [80]
+                0.00    0.00      60/1695137     __mulsf3 [8]
+                0.00    0.00      10/10          vecteur3d_mul [84]
+                0.00    0.00      60/540366      __subsf3 [16]
+                0.00    0.00      20/161872      __floatsisf [21]
+                0.00    0.00      30/42014       __fixsfsi [42]
+                0.00    0.00      10/79340       sqrtf [22]
+                0.00    0.00      20/1157417     __addsf3 [13]
+                0.00    0.00      19/40923       __gtsf2 [39]
+                0.00    0.00      10/110523      __divsf3 [24]
+                0.00    0.00      60/1298        vecteur3d_init [79]
+-----------------------------------------------
+                0.06    0.00       1/1           main [2]
+[49]     0.1    0.06    0.00       1         ecran2d_clear [49]
+-----------------------------------------------
+                0.00    0.03       1/1           ss_solar_system_iterate [4]
+[50]     0.1    0.00    0.03       1         ss_solar_system_calculateSpeedVariations [50]
+                0.00    0.01      81/111         vecteur3d_normalize [60]
+                0.00    0.00     405/1695137     __mulsf3 [8]
+                0.00    0.00      81/81          vecteur3d_length [72]
+                0.00    0.00      72/72          vecteur3d_sub [76]
+                0.00    0.00      72/72          __muldf3 [77]
+                0.00    0.00     153/869         __extendsfdf2 [65]
+                0.00    0.00      81/79340       sqrtf [22]
+                0.00    0.00      81/797         __divdf3 [63]
+                0.00    0.00     144/1157417     __addsf3 [13]
+                0.00    0.00      81/797         __truncdfsf2 [75]
+                0.00    0.00       9/10          vecteur3d_negate [97]
+-----------------------------------------------
+                0.03    0.00       1/1           exit [29]
+[51]     0.1    0.03    0.00       1         _exit [51]
+-----------------------------------------------
+                0.00    0.00     720/39568       __ieee754_rem_pio2f [27]
+                0.03    0.00   38848/39568       acosf [9]
+[52]     0.1    0.03    0.00   39568         fabsf [52]
+-----------------------------------------------
+                0.00    0.03     278/278         ss_orbit_render [25]
+[53]     0.1    0.00    0.03     278         ss_orbit_line_clip [53]
+                0.00    0.01    1148/161872      __floatsisf [21]
+                0.00    0.00    1148/40923       __gtsf2 [39]
+                0.00    0.00     923/80162       __ltsf2 [37]
+                0.00    0.00      18/42014       __fixsfsi [42]
+-----------------------------------------------
+                0.03    0.00   39564/39564       ss_planet_getBall3DIntensity [7]
+[54]     0.1    0.03    0.00   39564         vecteur4d_init [54]
+-----------------------------------------------
+                0.00    0.00      40/616         ss_planet_render [48]
+                0.00    0.02     576/616         ss_orbit_render [25]
+[55]     0.0    0.00    0.02     616         vecteur4d_getVecteur3d [55]
+                0.01    0.01    1848/110523      __divsf3 [24]
+                0.00    0.00     616/80162       __ltsf2 [37]
+-----------------------------------------------
+                                                 <spontaneous>
+[56]     0.0    0.02    0.00                 camera3d_setOrientation [56]
+-----------------------------------------------
+                                                 <spontaneous>
+[57]     0.0    0.02    0.00                 __gesf2 [57]
+-----------------------------------------------
+                0.02    0.00     716/716         sqrtf [22]
+[58]     0.0    0.02    0.00     716         matherr [58]
+-----------------------------------------------
+                                                 <spontaneous>
+[59]     0.0    0.01    0.00                 vecteur4d_init_v3d [59]
+-----------------------------------------------
+                0.00    0.00      30/111         ss_planet_render [48]
+                0.00    0.01      81/111         ss_solar_system_calculateSpeedVariations [50]
+[60]     0.0    0.00    0.01     111         vecteur3d_normalize [60]
+                0.00    0.00     333/1695137     __mulsf3 [8]
+                0.00    0.00     333/110523      __divsf3 [24]
+                0.00    0.00     111/79340       sqrtf [22]
+                0.00    0.00     222/1157417     __addsf3 [13]
+-----------------------------------------------
+                0.00    0.00      10/30          ss_planet_draw [5]
+                0.00    0.00      10/30          ss_planet_clear [69]
+                0.00    0.00      10/30          ss_planet_render [48]
+[61]     0.0    0.01    0.00      30         __nesf2 [61]
+                0.00    0.00      30/159962      __fpcmp_parts_f [38]
+                0.00    0.00      60/7371127     __unpack_f [15]
+-----------------------------------------------
+                0.00    0.01       9/9           ss_solar_system_iterate [4]
+[62]     0.0    0.00    0.01       9         ss_orbit_draw [62]
+                0.01    0.00    5760/45324       ecran2d_setPixel [46]
+-----------------------------------------------
+                0.00    0.00      81/797         ss_solar_system_calculateSpeedVariations [50]
+                0.01    0.00     716/797         sqrtf [22]
+[63]     0.0    0.01    0.01     797         __divdf3 [63]
+                0.00    0.00    1594/2535        __unpack_d [67]
+                0.00    0.00     797/1738        __pack_d [68]
+-----------------------------------------------
+                                                 <spontaneous>
+[64]     0.0    0.01    0.00                 scalbnf [64]
+-----------------------------------------------
+                0.00    0.00     153/869         ss_solar_system_calculateSpeedVariations [50]
+                0.01    0.00     716/869         sqrtf [22]
+[65]     0.0    0.01    0.00     869         __extendsfdf2 [65]
+                0.00    0.00     869/869         __make_dp [74]
+                0.00    0.00     869/7371127     __unpack_f [15]
+-----------------------------------------------
+                                                 <spontaneous>
+[66]     0.0    0.01    0.00                 matrice4d_init [66]
+-----------------------------------------------
+                0.00    0.00     144/2535        __muldf3 [77]
+                0.00    0.00     797/2535        __truncdfsf2 [75]
+                0.00    0.00    1594/2535        __divdf3 [63]
+[67]     0.0    0.01    0.00    2535         __unpack_d [67]
+-----------------------------------------------
+                0.00    0.00      72/1738        __muldf3 [77]
+                0.00    0.00     797/1738        __divdf3 [63]
+                0.00    0.00     869/1738        __make_dp [74]
+[68]     0.0    0.01    0.00    1738         __pack_d [68]
+-----------------------------------------------
+                0.00    0.00      10/10          ss_solar_system_iterate [4]
+[69]     0.0    0.00    0.00      10         ss_planet_clear [69]
+                0.00    0.00      10/30          __nesf2 [61]
+-----------------------------------------------
+                                                 <spontaneous>
+[70]     0.0    0.00    0.00                 nan [70]
+-----------------------------------------------
+                                                 <spontaneous>
+[71]     0.0    0.00    0.00                 __kernel_rem_pio2f [71]
+-----------------------------------------------
+                0.00    0.00      81/81          ss_solar_system_calculateSpeedVariations [50]
+[72]     0.0    0.00    0.00      81         vecteur3d_length [72]
+                0.00    0.00     243/1695137     __mulsf3 [8]
+                0.00    0.00     162/1157417     __addsf3 [13]
+-----------------------------------------------
+                                                 <spontaneous>
+[73]     0.0    0.00    0.00                 __mcount_record [73]
+                0.00    0.00       1/2           alt_alarm_start [114]
+                0.00    0.00       1/1           memset [130]
+-----------------------------------------------
+                0.00    0.00     869/869         __extendsfdf2 [65]
+[74]     0.0    0.00    0.00     869         __make_dp [74]
+                0.00    0.00     869/1738        __pack_d [68]
+-----------------------------------------------
+                0.00    0.00      81/797         ss_solar_system_calculateSpeedVariations [50]
+                0.00    0.00     716/797         sqrtf [22]
+[75]     0.0    0.00    0.00     797         __truncdfsf2 [75]
+                0.00    0.00     797/797         __make_fp [78]
+                0.00    0.00     797/2535        __unpack_d [67]
+-----------------------------------------------
+                0.00    0.00      72/72          ss_solar_system_calculateSpeedVariations [50]
+[76]     0.0    0.00    0.00      72         vecteur3d_sub [76]
+                0.00    0.00     216/540366      __subsf3 [16]
+-----------------------------------------------
+                0.00    0.00      72/72          ss_solar_system_calculateSpeedVariations [50]
+[77]     0.0    0.00    0.00      72         __muldf3 [77]
+                0.00    0.00     288/1173253     __muldi3 [19]
+                0.00    0.00     144/2535        __unpack_d [67]
+                0.00    0.00      72/1738        __pack_d [68]
+-----------------------------------------------
+                0.00    0.00     797/797         __truncdfsf2 [75]
+[78]     0.0    0.00    0.00     797         __make_fp [78]
+                0.00    0.00     797/3666095     __pack_f [12]
+-----------------------------------------------
+                0.00    0.00       6/1298        camera3d_init [81]
+                0.00    0.00      10/1298        ss_solar_system_init [40]
+                0.00    0.00      60/1298        ss_planet_render [48]
+                0.00    0.00      70/1298        ss_planet_init [86]
+                0.00    0.00     576/1298        ss_orbit_render [25]
+                0.00    0.00     576/1298        ss_orbit_init [41]
+[79]     0.0    0.00    0.00    1298         vecteur3d_init [79]
+-----------------------------------------------
+                0.00    0.00      10/20          ss_solar_system_iterate [4]
+                0.00    0.00      10/20          ss_planet_render [48]
+[80]     0.0    0.00    0.00      20         vecteur3d_distance [80]
+                0.00    0.00      60/1695137     __mulsf3 [8]
+                0.00    0.00      60/540366      __subsf3 [16]
+                0.00    0.00      40/1157417     __addsf3 [13]
+-----------------------------------------------
+                0.00    0.00       1/1           main [2]
+[81]     0.0    0.00    0.00       1         camera3d_init [81]
+                0.00    0.00       1/587         matrice4d_product_m4d [28]
+                0.00    0.00       1/10          vecteur3d_crossProduct [83]
+                0.00    0.00       1/1           matrice4d_setProjectionMatrix [89]
+                0.00    0.00       6/1298        vecteur3d_init [79]
+                0.00    0.00       1/10          vecteur3d_negate [97]
+                0.00    0.00       1/10          matrice4d_setRotationMatrixXYZ [95]
+                0.00    0.00       1/1           matrice4d_setTranslationMatrix [129]
+-----------------------------------------------
+                0.00    0.00      20/20          ss_planet_render [48]
+[82]     0.0    0.00    0.00      20         vecteur3d_add [82]
+                0.00    0.00      60/1157417     __addsf3 [13]
+-----------------------------------------------
+                0.00    0.00       1/10          camera3d_init [81]
+                0.00    0.00       9/10          ss_planet_drawBall3D [6]
+[83]     0.0    0.00    0.00      10         vecteur3d_crossProduct [83]
+                0.00    0.00      60/1695137     __mulsf3 [8]
+                0.00    0.00      30/540366      __subsf3 [16]
+-----------------------------------------------
+                0.00    0.00      10/10          ss_planet_render [48]
+[84]     0.0    0.00    0.00      10         vecteur3d_mul [84]
+                0.00    0.00      30/1695137     __mulsf3 [8]
+-----------------------------------------------
+                0.00    0.00       9/9           ss_solar_system_iterate [4]
+[85]     0.0    0.00    0.00       9         ss_planet_updatePos [85]
+                0.00    0.00      18/1695137     __mulsf3 [8]
+                0.00    0.00      18/1157417     __addsf3 [13]
+-----------------------------------------------
+                0.00    0.00      10/10          ss_solar_system_init [40]
+[86]     0.0    0.00    0.00      10         ss_planet_init [86]
+                0.00    0.00      10/1695137     __mulsf3 [8]
+                0.00    0.00      10/110523      __divsf3 [24]
+                0.00    0.00      70/1298        vecteur3d_init [79]
+-----------------------------------------------
+                                                 <spontaneous>
+[87]     0.0    0.00    0.00                 nios2_pcsample [87]
+-----------------------------------------------
+                0.00    0.00       9/9           ss_solar_system_iterate [4]
+[88]     0.0    0.00    0.00       9         ss_planet_updateSpeed [88]
+                0.00    0.00      18/1157417     __addsf3 [13]
+-----------------------------------------------
+                0.00    0.00       1/1           camera3d_init [81]
+[89]     0.0    0.00    0.00       1         matrice4d_setProjectionMatrix [89]
+                0.00    0.00       2/110523      __divsf3 [24]
+                0.00    0.00       2/540366      __subsf3 [16]
+                0.00    0.00       2/1157417     __addsf3 [13]
+                0.00    0.00       1/1695137     __mulsf3 [8]
+-----------------------------------------------
+                0.00    0.00  148179/148179      alt_exception [135]
+[90]     0.0    0.00    0.00  148179         alt_irq_handler [90]
+                0.00    0.00  148173/148173      alt_avalon_timer_sc_irq [91]
+                0.00    0.00       6/6           altera_avalon_jtag_uart_irq [101]
+-----------------------------------------------
+                0.00    0.00  148173/148173      alt_irq_handler [90]
+[91]     0.0    0.00    0.00  148173         alt_avalon_timer_sc_irq [91]
+                0.00    0.00  148173/148173      alt_tick [92]
+-----------------------------------------------
+                0.00    0.00  148173/148173      alt_avalon_timer_sc_irq [91]
+[92]     0.0    0.00    0.00  148173         alt_tick [92]
+                0.00    0.00     148/148         altera_avalon_jtag_uart_timeout [94]
+-----------------------------------------------
+                0.00    0.00       6/582         altera_avalon_jtag_uart_write [102]
+                0.00    0.00     576/582         ss_orbit_render [25]
+[93]     0.0    0.00    0.00     582         memcpy [93]
+-----------------------------------------------
+                0.00    0.00     148/148         alt_tick [92]
+[94]     0.0    0.00    0.00     148         altera_avalon_jtag_uart_timeout [94]
+-----------------------------------------------
+                0.00    0.00       1/10          camera3d_init [81]
+                0.00    0.00       9/10          ss_planet_drawBall3D [6]
+[95]     0.0    0.00    0.00      10         matrice4d_setRotationMatrixXYZ [95]
+-----------------------------------------------
+                0.00    0.00      10/10          ss_solar_system_iterate [4]
+[96]     0.0    0.00    0.00      10         ss_planet_swapDisplayBuffer [96]
+-----------------------------------------------
+                0.00    0.00       1/10          camera3d_init [81]
+                0.00    0.00       9/10          ss_solar_system_calculateSpeedVariations [50]
+[97]     0.0    0.00    0.00      10         vecteur3d_negate [97]
+-----------------------------------------------
+                0.00    0.00       9/9           ss_solar_system_iterate [4]
+[98]     0.0    0.00    0.00       9         ss_orbit_clear [98]
+-----------------------------------------------
+                0.00    0.00       9/9           ss_solar_system_iterate [4]
+[99]     0.0    0.00    0.00       9         ss_orbit_swapDisplayBuffer [99]
+-----------------------------------------------
+                0.00    0.00       1/6           alt_main [1]
+                0.00    0.00       2/6           alt_io_redirect [123]
+                0.00    0.00       3/6           close [32]
+[100]    0.0    0.00    0.00       6         alt_release_fd [100]
+-----------------------------------------------
+                0.00    0.00       6/6           alt_irq_handler [90]
+[101]    0.0    0.00    0.00       6         altera_avalon_jtag_uart_irq [101]
+-----------------------------------------------
+                0.00    0.00       6/6           write [105]
+[102]    0.0    0.00    0.00       6         altera_avalon_jtag_uart_write [102]
+                0.00    0.00       6/582         memcpy [93]
+-----------------------------------------------
+                0.00    0.00       6/6           write [105]
+[103]    0.0    0.00    0.00       6         altera_avalon_jtag_uart_write_fd [103]
+-----------------------------------------------
+                0.00    0.00       3/6           _puts_r [208]
+                0.00    0.00       3/6           alt_find_dev [106]
+[104]    0.0    0.00    0.00       6         strlen [104]
+-----------------------------------------------
+                0.00    0.00       6/6           _write_r [202]
+[105]    0.0    0.00    0.00       6         write [105]
+                0.00    0.00       6/6           altera_avalon_jtag_uart_write [102]
+                0.00    0.00       6/6           altera_avalon_jtag_uart_write_fd [103]
+-----------------------------------------------
+                0.00    0.00       3/3           open [111]
+[106]    0.0    0.00    0.00       3         alt_find_dev [106]
+                0.00    0.00       3/3           memcmp [110]
+                0.00    0.00       3/6           strlen [104]
+-----------------------------------------------
+                0.00    0.00       3/3           open [111]
+[107]    0.0    0.00    0.00       3         alt_get_fd [107]
+-----------------------------------------------
+                0.00    0.00       3/3           close [32]
+[108]    0.0    0.00    0.00       3         altera_avalon_jtag_uart_close_fd [108]
+-----------------------------------------------
+                0.00    0.00       3/3           _fwalk [35]
+[109]    0.0    0.00    0.00       3         fclose [109]
+-----------------------------------------------
+                0.00    0.00       3/3           alt_find_dev [106]
+[110]    0.0    0.00    0.00       3         memcmp [110]
+-----------------------------------------------
+                0.00    0.00       3/3           alt_io_redirect [123]
+[111]    0.0    0.00    0.00       3         open [111]
+                0.00    0.00       3/3           alt_find_dev [106]
+                0.00    0.00       3/3           alt_get_fd [107]
+-----------------------------------------------
+                0.00    0.00       3/3           main [2]
+[112]    0.0    0.00    0.00       3         puts [112]
+-----------------------------------------------
+                0.00    0.00       1/3           __swsetup_r [212]
+                0.00    0.00       2/3           __sinit [210]
+[113]    0.0    0.00    0.00       3         std [113]
+-----------------------------------------------
+                0.00    0.00       1/2           altera_avalon_jtag_uart_init [127]
+                0.00    0.00       1/2           __mcount_record [73]
+[114]    0.0    0.00    0.00       2         alt_alarm_start [114]
+-----------------------------------------------
+                0.00    0.00       2/2           alt_iic_isr_register [117]
+[115]    0.0    0.00    0.00       2         alt_ic_irq_enable [115]
+-----------------------------------------------
+                0.00    0.00       1/2           altera_avalon_jtag_uart_init [127]
+                0.00    0.00       1/2           alt_avalon_timer_sc_init [118]
+[116]    0.0    0.00    0.00       2         alt_ic_isr_register [116]
+-----------------------------------------------
+                0.00    0.00       1/2           altera_avalon_jtag_uart_init [127]
+                0.00    0.00       1/2           alt_avalon_timer_sc_init [118]
+[117]    0.0    0.00    0.00       2         alt_iic_isr_register [117]
+                0.00    0.00       2/2           alt_ic_irq_enable [115]
+-----------------------------------------------
+                0.00    0.00       1/1           alt_sys_init [126]
+[118]    0.0    0.00    0.00       1         alt_avalon_timer_sc_init [118]
+                0.00    0.00       1/2           alt_ic_isr_register [116]
+                0.00    0.00       1/2           alt_iic_isr_register [117]
+-----------------------------------------------
+                0.00    0.00       1/1           alt_load [125]
+[119]    0.0    0.00    0.00       1         alt_dcache_flush_all [119]
+-----------------------------------------------
+                0.00    0.00       1/1           alt_main [1]
+[120]    0.0    0.00    0.00       1         alt_dev_llist_insert [120]
+-----------------------------------------------
+                0.00    0.00       1/1           _start [3]
+[121]    0.0    0.00    0.00       1         alt_icache_flush [121]
+-----------------------------------------------
+                0.00    0.00       1/1           _start [3]
+[122]    0.0    0.00    0.00       1         alt_icache_flush_all [122]
+-----------------------------------------------
+                0.00    0.00       1/1           alt_main [1]
+[123]    0.0    0.00    0.00       1         alt_io_redirect [123]
+                0.00    0.00       3/3           open [111]
+                0.00    0.00       2/6           alt_release_fd [100]
+-----------------------------------------------
+                0.00    0.00       1/1           alt_main [1]
+[124]    0.0    0.00    0.00       1         alt_irq_init [124]
+                0.00    0.00       1/1           altera_nios2_qsys_irq_init [128]
+-----------------------------------------------
+                0.00    0.00       1/1           _start [3]
+[125]    0.0    0.00    0.00       1         alt_load [125]
+                0.00    0.00       1/1           alt_dcache_flush_all [119]
+-----------------------------------------------
+                0.00    0.00       1/1           alt_main [1]
+[126]    0.0    0.00    0.00       1         alt_sys_init [126]
+                0.00    0.00       1/1           altera_avalon_jtag_uart_init [127]
+                0.00    0.00       1/1           alt_avalon_timer_sc_init [118]
+-----------------------------------------------
+                0.00    0.00       1/1           alt_sys_init [126]
+[127]    0.0    0.00    0.00       1         altera_avalon_jtag_uart_init [127]
+                0.00    0.00       1/2           alt_ic_isr_register [116]
+                0.00    0.00       1/2           alt_iic_isr_register [117]
+                0.00    0.00       1/2           alt_alarm_start [114]
+-----------------------------------------------
+                0.00    0.00       1/1           alt_irq_init [124]
+[128]    0.0    0.00    0.00       1         altera_nios2_qsys_irq_init [128]
+-----------------------------------------------
+                0.00    0.00       1/1           camera3d_init [81]
+[129]    0.0    0.00    0.00       1         matrice4d_setTranslationMatrix [129]
+-----------------------------------------------
+                0.00    0.00       1/1           __mcount_record [73]
+[130]    0.0    0.00    0.00       1         memset [130]
+-----------------------------------------------
+                0.00    0.00     716/716         sqrtf [22]
+[200]    0.0    0.00    0.00     716         __errno [200]
+-----------------------------------------------
+                0.00    0.00       6/6           __sfvwrite_r [206]
+[201]    0.0    0.00    0.00       6         __swrite [201]
+-----------------------------------------------
+                0.00    0.00       6/6           __sfvwrite_r [206]
+[202]    0.0    0.00    0.00       6         _write_r [202]
+                0.00    0.00       6/6           write [105]
+-----------------------------------------------
+                0.00    0.00       1/4           _fwalk [35]
+                0.00    0.00       3/4           _fclose_r [34]
+[203]    0.0    0.00    0.00       4         __sfp_lock_acquire [203]
+-----------------------------------------------
+                0.00    0.00       1/4           _fwalk [35]
+                0.00    0.00       3/4           _fclose_r [34]
+[204]    0.0    0.00    0.00       4         __sfp_lock_release [204]
+-----------------------------------------------
+                0.00    0.00       3/3           _fclose_r [34]
+[205]    0.0    0.00    0.00       3         __sclose [205]
+-----------------------------------------------
+                0.00    0.00       3/3           _puts_r [208]
+[206]    0.0    0.00    0.00       3         __sfvwrite_r [206]
+                0.00    0.00       6/6           __swrite [201]
+                0.00    0.00       6/6           _write_r [202]
+                0.00    0.00       1/1           __swsetup_r [212]
+-----------------------------------------------
+                0.00    0.00       3/3           _fclose_r [34]
+[207]    0.0    0.00    0.00       3         _fflush_r [207]
+-----------------------------------------------
+                0.00    0.00       3/3           main [2]
+[208]    0.0    0.00    0.00       3         _puts_r [208]
+                0.00    0.00       3/3           __sfvwrite_r [206]
+                0.00    0.00       3/6           strlen [104]
+-----------------------------------------------
+                0.00    0.00       1/1           exit [29]
+[209]    0.0    0.00    0.00       1         __call_exitprocs [209]
+-----------------------------------------------
+                0.00    0.00       1/1           __swsetup_r [212]
+[210]    0.0    0.00    0.00       1         __sinit [210]
+                0.00    0.00       2/3           std [113]
+-----------------------------------------------
+                0.00    0.00       1/1           __swsetup_r [212]
+[211]    0.0    0.00    0.00       1         __smakebuf_r [211]
+-----------------------------------------------
+                0.00    0.00       1/1           __sfvwrite_r [206]
+[212]    0.0    0.00    0.00       1         __swsetup_r [212]
+                0.00    0.00       1/1           __smakebuf_r [211]
+                0.00    0.00       1/3           std [113]
+                0.00    0.00       1/1           __sinit [210]
+-----------------------------------------------
+                0.00    0.00       1/1           exit [29]
+[213]    0.0    0.00    0.00       1         _cleanup_r [213]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+
+Index by function name
+
+  [13] __addsf3               [35] _fwalk                 [89] matrice4d_setProjectionMatrix
+ [209] __call_exitprocs      [208] _puts_r                [95] matrice4d_setRotationMatrixXYZ
+  [23] __clzsi2              [202] _write_r              [129] matrice4d_setTranslationMatrix
+  [63] __divdf3                [9] acosf                 [110] memcmp
+  [24] __divsf3              [114] alt_alarm_start        [93] memcpy
+ [200] __errno               [118] alt_avalon_timer_sc_init [130] memset
+  [65] __extendsfdf2          [91] alt_avalon_timer_sc_irq (altera_avalon_timer_sc.c) [70] nan
+  [42] __fixsfsi             [119] alt_dcache_flush_all   [87] nios2_pcsample (alt_gmon.c)
+  [21] __floatsisf           [120] alt_dev_llist_insert  [111] open
+  [38] __fpcmp_parts_f       [106] alt_find_dev          [112] puts
+  [57] __gesf2               [107] alt_get_fd             [36] read
+  [39] __gtsf2               [115] alt_ic_irq_enable      [64] scalbnf
+  [11] __ieee754_acosf       [116] alt_ic_isr_register    [14] sinf
+  [27] __ieee754_rem_pio2f   [121] alt_icache_flush       [22] sqrtf
+  [26] __ieee754_sqrtf       [122] alt_icache_flush_all   [98] ss_orbit_clear
+  [17] __kernel_cosf         [117] alt_iic_isr_register   [62] ss_orbit_draw
+  [71] __kernel_rem_pio2f    [123] alt_io_redirect        [41] ss_orbit_init
+  [18] __kernel_sinf          [90] alt_irq_handler        [53] ss_orbit_line_clip
+  [44] __lesf2               [124] alt_irq_init           [25] ss_orbit_render
+  [37] __ltsf2               [125] alt_load               [99] ss_orbit_swapDisplayBuffer
+  [74] __make_dp               [1] alt_main               [69] ss_planet_clear
+  [78] __make_fp             [100] alt_release_fd          [5] ss_planet_draw
+  [30] __malloc_unlock       [126] alt_sys_init            [6] ss_planet_drawBall3D
+  [73] __mcount_record        [92] alt_tick                [7] ss_planet_getBall3DIntensity
+  [77] __muldf3               [31] altera_avalon_jtag_uart_close [86] ss_planet_init
+  [19] __muldi3              [108] altera_avalon_jtag_uart_close_fd [48] ss_planet_render
+   [8] __mulsf3              [127] altera_avalon_jtag_uart_init [96] ss_planet_swapDisplayBuffer
+  [61] __nesf2               [101] altera_avalon_jtag_uart_irq (altera_avalon_jtag_uart_init.c) [85] ss_planet_updatePos
+  [68] __pack_d               [94] altera_avalon_jtag_uart_timeout (altera_avalon_jtag_uart_init.c) [88] ss_planet_updateSpeed
+  [12] __pack_f              [102] altera_avalon_jtag_uart_write [50] ss_solar_system_calculateSpeedVariations
+ [205] __sclose              [103] altera_avalon_jtag_uart_write_fd [40] ss_solar_system_init
+ [203] __sfp_lock_acquire    [128] altera_nios2_qsys_irq_init [4] ss_solar_system_iterate
+ [204] __sfp_lock_release     [81] camera3d_init         [113] std (findfp.c)
+ [206] __sfvwrite_r           [56] camera3d_setOrientation [104] strlen
+ [210] __sinit                [32] close                  [82] vecteur3d_add
+ [211] __smakebuf_r           [45] cosf                   [83] vecteur3d_crossProduct
+  [16] __subsf3               [49] ecran2d_clear          [80] vecteur3d_distance
+ [201] __swrite               [46] ecran2d_setPixel       [79] vecteur3d_init
+ [212] __swsetup_r            [29] exit                   [72] vecteur3d_length
+  [75] __truncdfsf2           [52] fabsf                  [84] vecteur3d_mul
+  [67] __unpack_d            [109] fclose                 [97] vecteur3d_negate
+  [15] __unpack_f             [47] isnanf                 [60] vecteur3d_normalize
+ [213] _cleanup_r              [2] main                   [76] vecteur3d_sub
+  [33] _close_r               [58] matherr                [55] vecteur4d_getVecteur3d
+  [51] _exit                  [66] matrice4d_init         [54] vecteur4d_init
+  [34] _fclose_r              [28] matrice4d_product_m4d  [59] vecteur4d_init_v3d
+ [207] _fflush_r              [43] matrice4d_product_v3d [105] write
+  [20] _fpadd_parts (fp-bit.c) [10] matrice4d_product_v4d

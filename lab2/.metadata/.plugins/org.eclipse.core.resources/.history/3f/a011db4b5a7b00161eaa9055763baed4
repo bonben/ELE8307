@@ -1,0 +1,339 @@
+#include "ss_planet.h"
+
+
+void ss_planet_init( ss_planet_t *planet, float mass, float radius, float orbit_a, float orbit_t, int color ) {
+
+	int i;
+	
+	// Properties
+	planet->mass = mass;
+	planet->radius = radius;	
+	planet->color = color;
+	planet->orbit_a = orbit_a;
+		
+	// Physisc
+	vecteur3d_init(&planet->center, orbit_a, 0, 0);
+	vecteur3d_init(&planet->speed, 0, 2*PI*orbit_a/orbit_t, 0);
+	
+	// Display
+	for( i=0; i<2; i++ ){
+		vecteur3d_init(&planet->screenRadius[i],0,0,0);
+		vecteur3d_init(&planet->screenCenter[i], 0,0,0);
+		planet->visible[i] = 0;
+	}
+	planet->current_display_buff  = 0;
+	planet->previous_display_buff = 1;
+
+	vecteur3d_init(&planet->light_dir, 0,0,1);
+	vecteur3d_init(&planet->light_dir, 0,1,0);
+    
+}
+
+void ss_planet_updatePos( ss_planet_t *planet, float dt ) {
+	
+	planet->center.x += planet->speed.x*dt;
+	planet->center.y += planet->speed.y*dt;	
+}
+
+void ss_planet_updateSpeed( ss_planet_t *planet, float dVx, float dVy ) {
+
+	planet->speed.x += dVx;
+	planet->speed.y += dVy;
+}
+
+/********************************************************************
+    ss_planet_render()
+  
+    Transformations de l'espace vers la caméra des coordonnées 
+    d'une planète.
+    
+  *******************************************************************/
+void ss_planet_render( ss_planet_t *planet, camera3d_t *cam ) {
+
+	vecteur3d_t v3d, screenPt;
+	vecteur4d_t v4d;
+	vecteur3d_t v3d_planet2sun, v3d_planet2sun_top;
+
+	matrice4d_t	modelView;
+	matrice4d_t	modelViewClip;
+
+	matrice4d_t camRot;
+	float planet_screen_radius;
+	float planet_screen_dist;
+
+	vecteur3d_t		w_v3d_planet_top, w_v3d_planet_dir, w_v3d_planet_center;	// world coords
+	vecteur3d_t		s_v3d_planet_top, s_v3d_planet_dir, s_v3d_planet_center;	// cam coords
+		
+	// Transformer le centre en coord ecran	
+	matrice4d_product_m4d( &cam->projection_matrix, &cam->view_matrix, &modelViewClip );
+	matrice4d_product_v3d( &modelViewClip, &planet->center, &v4d );
+	vecteur4d_getVecteur3d( &v4d, &v3d );
+	ss_planet_clipSpaceToScreenSpace( &v3d, &screenPt );
+	
+	// Trouver la taille du rayon
+	planet_screen_dist = vecteur3d_distance( &planet->center, &cam->center );
+	if( planet_screen_dist != 0 )
+		planet_screen_radius = planet->radius * cam->zoomx*200000 / planet_screen_dist;
+	else
+		planet_screen_radius = 0;
+
+	// Vecteurs de direction lumineuse de la balle
+	// Ball vertex init
+	vecteur3d_init(&w_v3d_planet_center, planet->center.x,planet->center.y,0);
+	vecteur3d_init(&w_v3d_planet_top, 0,0,1*planet->radius);
+	vecteur3d_add(&w_v3d_planet_top, &w_v3d_planet_center);
+	vecteur3d_init(&w_v3d_planet_dir, -planet->center.x,-planet->center.y,0);
+	vecteur3d_normalize(&w_v3d_planet_dir);
+	vecteur3d_mul(&w_v3d_planet_dir, planet->radius);
+	vecteur3d_add(&w_v3d_planet_dir, &w_v3d_planet_center);
+	// Ball vertex transform
+	matrice4d_product_v3d( &cam->view_matrix, &w_v3d_planet_top, &v4d );
+	vecteur4d_getVecteur3d( &v4d, &s_v3d_planet_top );
+	matrice4d_product_v3d( &cam->view_matrix, &w_v3d_planet_dir, &v4d );
+	vecteur4d_getVecteur3d( &v4d, &s_v3d_planet_dir );
+	matrice4d_product_v3d( &cam->view_matrix, &w_v3d_planet_center, &v4d );
+	vecteur4d_getVecteur3d( &v4d, &s_v3d_planet_center );
+
+	vecteur3d_init(&v3d_planet2sun, -s_v3d_planet_dir.x+s_v3d_planet_center.x, s_v3d_planet_dir.y-s_v3d_planet_center.y, s_v3d_planet_dir.z-s_v3d_planet_center.z );
+	vecteur3d_init(&v3d_planet2sun_top, -s_v3d_planet_top.x+s_v3d_planet_center.x, s_v3d_planet_top.y-s_v3d_planet_center.y, s_v3d_planet_top.z-s_v3d_planet_center.z );	
+	vecteur3d_normalize(&v3d_planet2sun);
+	vecteur3d_normalize(&v3d_planet2sun_top);
+
+	planet->screenCenter[planet->current_display_buff] = screenPt;
+	planet->screenRadius[planet->current_display_buff] = (int)planet_screen_radius;
+	planet->light_dir = v3d_planet2sun;
+	planet->light_top = v3d_planet2sun_top;
+
+	if( v4d.z > -1 && planet_screen_dist > 1)
+		planet->visible[planet->current_display_buff] = 1;
+	else
+		planet->visible[planet->current_display_buff] = 0;
+
+}
+
+/********************************************************************
+    ss_planet_draw()
+  
+    Dessine un planete à l'écran
+    
+  *******************************************************************/
+void ss_planet_draw( ss_planet_t *planet ) {
+
+	int buff = planet->current_display_buff;
+	vecteur3d_t light_dir, light_top;
+
+	if( planet->orbit_a != 0 && planet->visible[buff] == 1) {
+		ss_planet_drawBall3D( planet->screenCenter[buff].x, planet->screenCenter[buff].y, planet->screenRadius[buff], planet->color, &planet->light_dir, &planet->light_top );
+	}
+	else if ( planet->visible[buff] == 1 ) {
+		vecteur3d_init( &light_dir, 0,0,-1);
+		vecteur3d_init( &light_top, 1,0,0);
+		ss_planet_drawBall3D( planet->screenCenter[buff].x, planet->screenCenter[buff].y, planet->screenRadius[buff] /20, planet->color, &light_dir, &light_top );
+	}
+}
+
+/********************************************************************
+    ss_planet_clear()
+  
+    Efface une planète à l'écran
+  *******************************************************************/
+void ss_planet_clear( ss_planet_t *planet ) {
+
+	int buff = planet->previous_display_buff;
+	if( planet->orbit_a != 0 && planet->visible[buff] == 1)
+		ss_planet_drawBall( planet->screenCenter[buff].x, planet->screenCenter[buff].y, planet->screenRadius[buff], 0 );		
+	else if ( planet->visible[buff] == 1 )
+		ss_planet_drawBall( planet->screenCenter[buff].x, planet->screenCenter[buff].y, planet->screenRadius[buff] / 20, 0 );
+}
+
+/********************************************************************
+    ss_planet_swapDisplayBuffer()
+  
+    Un tampon pour les coordonnées d'affichage courant, et l'autre
+    pour les coordonnées d'affichage précédents.
+    
+    Utilisé lorsque l'écran ne dispose que d'un seul tampon mémoire.
+    
+  *******************************************************************/
+void ss_planet_swapDisplayBuffer( ss_planet_t *planet ) {
+
+	if( planet->current_display_buff == 0 ) {
+		planet->current_display_buff = 1;
+		planet->previous_display_buff = 0;
+	}
+	else {
+		planet->current_display_buff = 0;
+		planet->previous_display_buff = 1;
+	}	
+}
+
+/********************************************************************
+	ss_planet_drawBall()
+	
+	Draws a 2D Filled Circle
+    
+    Color (0-255)
+
+  *******************************************************************/
+void ss_planet_drawBall( int x0, int y0, int radius, int color ) {
+
+	int i,j;
+	int x=0;
+    int y=radius;
+    int m= 5-4*radius;
+    
+    while( x<=y ) {
+             
+        for( i=-x+x0; i< x+x0; i++ ){
+            if( i < 0 || i > 640 ) continue;
+            ecran2d_setPixel(i,y+y0, color );
+            ecran2d_setPixel(i,-y+y0, color );
+        }
+        for( i=-y+x0; i< y+x0; i++ ){
+            if( i < 0 || i > 640 ) continue;
+            ecran2d_setPixel(i,x+y0, color );
+            ecran2d_setPixel(i,-x+y0, color );
+        }        
+        if( m>0 ) {
+            y--;
+            m= m-8*y;
+        }
+        x++;
+        m = m+8*x+4;
+    } 
+}
+
+/********************************************************************
+	ss_planet_drawBall3D()
+	
+	Draws a 3D Ball where vz is the new direction in space of the
+	z axis, and vy is the new top axis. 
+
+	Color is an index from 0-7 (white,red....)
+
+  *******************************************************************/
+void ss_planet_drawBall3D( int x0, int y0, int radius, int color, vecteur3d_t *vz, vecteur3d_t *vy ) {
+
+	int x=0;
+    int y=radius;
+    int m= 5-4*radius;
+	int i,j;
+	int intensity;
+	vecteur3d_t	vx;
+	matrice4d_t	modelT;  
+	int c = color;
+    
+	if( x0 -radius >= ECRAN2D_WIDTH || x0+radius < 0 || y0+radius <0 || y0-radius >= ECRAN2D_WIDTH ) return;
+
+	vecteur3d_crossProduct(vz,vy,&vx);		
+	matrice4d_setRotationMatrixXYZ( &modelT, vy, &vx, vz);
+       	
+	while( x<=y ) {
+               		
+        for( i=-x+x0; i< x+x0; i++ ){
+			if( i < 0 || i >= ECRAN2D_WIDTH ) continue;
+            intensity = ss_planet_getBall3DIntensity(i-x0, y, radius,&modelT);						
+			ecran2d_setPixel(i,y+y0, (c<<5)+intensity );   
+            intensity = ss_planet_getBall3DIntensity(i-x0, -y, radius,&modelT);			
+			ecran2d_setPixel(i,-y+y0, (c<<5)+intensity );
+        }
+        for( i=-y+x0; i< y+x0; i++ ){
+			if( i < 0 || i >= ECRAN2D_WIDTH ) continue;
+            intensity = ss_planet_getBall3DIntensity(i-x0, x, radius,&modelT);
+            ecran2d_setPixel(i,x+y0, (c<<5)+intensity );
+            intensity = ss_planet_getBall3DIntensity(i-x0, -x, radius,&modelT);
+            ecran2d_setPixel(i,-x+y0, (c<<5)+intensity );
+        }
+        if( m>0 ) {
+            y--;
+            m= m-8*y;
+        }
+        x++;
+        m = m+8*x+4;
+    }
+
+}
+
+/********************************************************************
+	ss_planet_getBall3DReferenceIntensity()
+	
+	Calculates the intensity of a point (x,y,z) on the surface of a
+	sphere (of radius = radius) where light is comming from the Z axis.
+
+  *******************************************************************/
+inline int  ss_planet_getBall3DReferenceIntensity( float x, float y, float z, int radius ) {
+
+	const float r2_to_intensity[101] =
+	{
+	                        1, 0.99498743721894167268971, 0.98994949388695319125731, 0.98488578052003183938012, 0.97979589756952423229563,
+	0.97467943600972328788146, 0.96953597409605940526944, 0.96436507980772367965017, 0.95916630947855963107429, 0.95393920735279691403008,
+	0.94868330511875509358788, 0.94339812141916401522224, 0.93808316133665370362138, 0.93273791585285770189273,  0.9273618572623713030012,
+	0.92195445057806235666931, 0.91651514094218800021707, 0.91104335693306093268973, 0.90553850986440254100529, 0.89999999304612476880294,
+	0.89442718100391305213748, 0.88881942865476815107684, 0.88317607043543167044675, 0.87749641938035982668964, 0.87177976614563290613802,
+	0.86602538657805960831126, 0.86023251492513397309381, 0.85440036825317666746571, 0.84852813672140958711765, 0.84261498226927478150117,
+	0.83666003722025195088463, 0.83066240279558611891986, 0.82462114753071891204428,  0.8185353055865232096977, 0.81240387494667098966517,
+	0.80622581549160854397229, 0.80000004693865645055695, 0.79372544663667898845461, 0.78740084720257874639771,  0.7810250339855194789962,
+	 0.7745967423432822407392, 0.76811465471345374833589, 0.76157739746023933591346, 0.75498353747552304771062,  0.7483315785103537010059,
+	0.74161995721025530947657, 0.73484703882460067347893, 0.72801111255668837785038, 0.72111038651705083868393, 0.71414298223781036423219,
+	0.70710692870050195768528, 0.70000013453618525893773, 0.69282046584048073700757, 0.68556561131970716882478, 0.67823315825821051117117,
+	0.67082056207129647784626, 0.66332513598867426374284, 0.65574403967640948476259, 0.64807426666075829135849, 0.64031263039598307340583,
+	0.63245574879304089499499, 0.62450002699608364586936,  0.6164416381579461701179, 0.60827650192292925801496, 0.60000026027355912727757,
+	0.59160825033554231833222, 0.58309547365918124040007, 0.57445656140265999312078, 0.56568573472848970862259, 0.55677675958327721428276,
+	0.54772289485541647557909, 0.53851683268542382965194, 0.52915062942633250830937, 0.51961562539922423464844, 0.50990235113771553709938,
+	0.50000041723233934476411, 0.48989838412599068240283,  0.4795836072115056691878, 0.46904205125206310800223, 0.45825806635506810549074,
+	0.44721411529180210564505, 0.43589043858861176161668, 0.42426463909889494674488, 0.41231116105007231675827, 0.40000062882850800916046,
+	0.38729899638385972826526, 0.37416643641124242014584, 0.36055586484403689961908, 0.34641094268249472687415, 0.33166330931671900161817,
+	0.31622865190184917816296, 0.30000094969917023846051,  0.2828437366411836184632, 0.26457624400896306848807, 0.24495019581668747710168,
+	0.22360815720222879110501, 0.20000154375434187059568, 0.17320689085848442467785, 0.14142360686111141165888, 0.10000323051956512554472,
+	0.00080972284920783959769053,
+	};
+
+
+	// Balle 3D : R2 = (x-x0)2 + (y-y0)2 + (z-z0)2
+    int 	intensity;
+	int		intensity_min = 0;
+    float	r = x*x + y*y;
+    
+    if( z <= 0 )
+    	intensity =
+    	intensity = 30*sinf(acosf(sqrtf(r)/(float)radius));
+    else
+        intensity = intensity_min;     
+
+    return (int)intensity;
+}
+
+/********************************************************************
+	ss_planet_getBall3DIntensity()
+	
+	Calculates the light intensity of a point x,y by determining
+	the corresponding reference ball point (x,y,z) using the given
+	rotation transform
+
+  *******************************************************************/
+int  ss_planet_getBall3DIntensity( int x, int y, int radius, matrice4d_t *transform ) {
+
+	vecteur4d_t ballPt, ballPtRef;
+	float z;
+ 
+	//matrice4d_setIdentity(transform);        // Balle de reference (test)
+	z = sqrtf((float)radius*radius - (x*x + y*y));
+	vecteur4d_init( &ballPt, x,y,z,1 );
+	matrice4d_product_v4d(transform, &ballPt, &ballPtRef );
+  
+	return ss_planet_getBall3DReferenceIntensity(ballPtRef.x, ballPtRef.y, ballPtRef.z, radius);	
+}
+
+/********************************************************************
+    ss_planet_clipSpaceToScreenSpace()
+  
+  *******************************************************************/
+void ss_planet_clipSpaceToScreenSpace( vecteur3d_t *pt, vecteur3d_t *result ) {
+
+	float i,j;
+	i = pt->x*ECRAN2D_WIDTH/2 + ECRAN2D_WIDTH/2;
+	j = -pt->y*ECRAN2D_HEIGHT/2 + ECRAN2D_HEIGHT/2;
+	vecteur3d_init(result, (int)i,(int)j, 0);
+}
+
+
